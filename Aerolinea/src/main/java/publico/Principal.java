@@ -125,6 +125,11 @@ public class Principal {
         boolean repetir = true;
         CapturarAvion(repetir);
     }
+    /**
+     * metodo que captura la informacion del avion al que el usuario desea montarse
+     * posteriomente hace la reserva
+     * @param repetir opcion de vuelo
+     */
     public void CapturarAvion(boolean repetir){
         Scanner scan = new Scanner(System.in);
         String opcionSilla;
@@ -387,6 +392,9 @@ public class Principal {
         }catch(Exception e){System.out.println("No hay reservas en el momento");}
         
     }
+    /**
+     * Metodo que ejecuta la accion de arrancar un avion y enseñar cuanto dinero recaudo
+     */
     public void arrancarAvion(){
         Scanner sc = new Scanner(System.in);
         boolean repetir = true;
@@ -408,7 +416,5 @@ public class Principal {
                 repetir=false;
             }catch(InputMismatchException | NumberFormatException e){System.out.println("Por favor solo digite los valores solicitados");}
         }
-        
-        
     }
 }
