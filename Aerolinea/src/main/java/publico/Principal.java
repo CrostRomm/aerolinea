@@ -417,4 +417,45 @@ public class Principal {
             }catch(InputMismatchException | NumberFormatException e){System.out.println("Por favor solo digite los valores solicitados");}
         }
     }
+    public String paraTest(String op){
+        boolean repetir=true;
+        String opcionSilla;
+        while(repetir){
+            try{
+                if(op.equals("1")){
+                    repetir=false;
+                    String g="";
+                    for(Integer mapaSilla:silla.getSilla().keySet()){
+                        Silla sillaAux = silla.getSilla().get(mapaSilla);
+                        if((sillaAux.getPrecioSilla() == 100000 && sillaAux.isDisponible()==true) || (sillaAux.getPrecioSilla() == 50000 && sillaAux.isDisponible()==true)){
+                             g = (sillaAux.getCodigoSilla());
+                             return g;
+                        }
+                    }
+                }else if(op.equals("2")){
+                    repetir=false;
+                    String g="";
+                    for(Integer mapaSilla:silla.getSilla().keySet()){
+                    Silla sillaAux = silla.getSilla().get(mapaSilla);
+                    if((sillaAux.getPrecioSilla() == 30000 && sillaAux.isDisponible()==true)){
+                        g =(sillaAux.getCodigoSilla());
+                        return g;
+                    }
+                }
+                } else if(op.equals("3")){
+                    repetir=false;
+                    String g="";
+                    for(Integer mapaSilla:silla.getSilla().keySet()){
+                    Silla sillaAux = silla.getSilla().get(mapaSilla);
+                    if((sillaAux.getPrecioSilla() == 1300000 && sillaAux.isDisponible()==true)){
+                        g =(sillaAux.getCodigoSilla());
+                        return g;
+                    }
+                }
+            }else{System.out.println("Por favor solo digite los valores solicitados");}
+        }catch(InputMismatchException | NumberFormatException e){System.out.println("Por favor solo digite los valores solicitados");}
+        }
+        return"";
+    }
+
 }
